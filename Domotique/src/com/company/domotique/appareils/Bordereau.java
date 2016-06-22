@@ -39,8 +39,8 @@ public class Bordereau extends Vector<AppareilElectrique> {
 
 		@Override
 		public int compare(AppareilElectrique o1, AppareilElectrique o2) {
-			String Ap1 =((AppareilElectrique)o1).getMarque();
-			String Ap2 =((AppareilElectrique)o2).getMarque();
+			String Ap1 =(o1).getMarque();
+			String Ap2 =(o2).getMarque();
 			return Ap1.compareTo(Ap2);
 		}
 
