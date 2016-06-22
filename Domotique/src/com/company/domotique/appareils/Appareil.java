@@ -1,6 +1,10 @@
 package com.company.domotique.appareils;
 public abstract class Appareil {
 
+	@Override
+	public String toString() {
+		return "Appareil [marque=" + marque + ", modele=" + modele + "]";
+	}
 	private String marque;
 	private String modele;
 	public Appareil(String pMarque,String pModele){

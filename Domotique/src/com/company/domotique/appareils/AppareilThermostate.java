@@ -46,7 +46,7 @@ public class AppareilThermostate extends AppareilElectrique {
 
 	@Override
 	public String toString() {
-		return "AppareilThermostate [puissanceInstantanee=" + puissanceInstantanee + ", incPuissance=" + incPuissance
+		return super.toString()+"AppareilThermostate [puissanceInstantanee=" + puissanceInstantanee + ", incPuissance=" + incPuissance
 				+ ", valeurThermostat=" + valeurThermostat + ", valeurThermostatMax = " + valeurThermostatMax + ", Marche : " + super.isEnMarche
 				+ ", Sous tension : " + super.isSousTension + ", Branché " + super.isBranche + "]";
 	}
@@ -54,6 +54,19 @@ public class AppareilThermostate extends AppareilElectrique {
 		if (valeurThermostat < valeurThermostatMax) {
 			this.valeurThermostat++;
 		}
+	}
+	
+	public void decrementerThermostat() {
+		if (valeurThermostat >0) {
+			this.valeurThermostat--;
+		}
+	}
+	
+	@Override
+	public void arreter() {
+	
+		super.arreter();
+		this.setValeurThermostat(0);
 	}
 	public int getConsommation() {
 		int conso=0;

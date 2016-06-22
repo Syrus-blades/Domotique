@@ -55,7 +55,7 @@ public class AppareilElectrique extends Appareil {
 	
 	@Override
 	public String toString() {
-		return "AppareilElectrique [iPuissance=" + iPuissance + ", isEnMarche=" + isEnMarche + ", puissanceMaxWatts="
+		return super.toString()+"AppareilElectrique [iPuissance=" + iPuissance + ", isEnMarche=" + isEnMarche + ", puissanceMaxWatts="
 				+ puissanceMaxWatts + ", isSousTension=" + isSousTension + ", isBranche=" + isBranche + "]";
 	}
 }
